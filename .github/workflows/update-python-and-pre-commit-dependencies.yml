@@ -5,7 +5,7 @@ on:
     branches: [main]
 jobs:
   update-python-and-pre-commit-dependencies:
-    if: ${{ github.actor == 'renovate[bot]' && contains(github.head_ref, '/python-dev-deps/') }}
+    if: ${{ github.actor == 'renovate[bot]' && endswith(github.head_ref, 'python-dev-deps') }}
     uses: tektronix/python-package-ci-cd/.github/workflows/_reusable-update-python-and-pre-commit-dependencies.yml@v1.3.0
     with:
       commit-user-name: ${{ vars.TEK_OPENSOURCE_NAME }}

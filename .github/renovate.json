@@ -34,10 +34,13 @@
             "semanticCommitScope": "python-deps"
         },
         {
-            "description": "Group all non-production updates together",
+            "description": "Group all non-production Python updates together",
             "groupName": "python-dev-deps",
             "matchDepTypes": [
                 "!dependencies"
+            ],
+            "matchManagers": [
+                "poetry"
             ]
         }
     ],
