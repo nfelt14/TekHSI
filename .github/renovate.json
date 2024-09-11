@@ -43,6 +43,13 @@
                 "poetry",
                 "pep621"
             ]
+        },
+        {
+            "description": "Group all Github Actions/Workflow updates together",
+            "groupName": "gh-actions",
+            "matchManagers": [
+                "github-actions"
+            ]
         }
     ],
     "platformCommit": "enabled",
