@@ -3,7 +3,8 @@
     "dependencyDashboard": true,
     "extends": [
         "config:best-practices",
-        "group:githubArtifactActions"
+        "group:githubArtifactActions",
+        "schedule:weekly"
     ],
     "packageRules": [
         {
@@ -37,7 +38,8 @@
             ],
             "matchManagers": [
                 "poetry",
-                "pep621"
+                "pep621",
+                "pip_requirements"
             ]
         },
         {
