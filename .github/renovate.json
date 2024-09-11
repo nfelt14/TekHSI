@@ -31,21 +31,14 @@
             "semanticCommitScope": "python-deps"
         },
         {
-            "description": "Match all production Python updates",
-            "matchDepTypes": [
-                "dependencies"
-            ],
-            "matchManagers": [
-                "poetry"
-            ]
-        },
-        {
             "description": "Group all non-production Python updates together",
             "groupName": "python-dev-deps",
+            "matchDepTypes": [
+                "!dependencies"
+            ],
             "matchManagers": [
                 "poetry",
-                "pep621",
-                "pip_requirements"
+                "pep621"
             ],
             "separateMajorMinor": false
         },
