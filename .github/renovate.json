@@ -31,6 +31,7 @@
             "semanticCommitScope": "python-deps"
         },
         {
+            "commitMessageSuffix": " for package development",
             "description": "Group all non-production Python updates from pyproject.toml together",
             "groupName": "python-dev-deps",
             "matchDepTypes": [
@@ -42,6 +43,7 @@
             "separateMajorMinor": false
         },
         {
+            "commitMessageSuffix": " for package development",
             "description": "Group all non-production Python updates from requirements.txt files together",
             "groupName": "python-dev-deps",
             "matchFileNames": [
