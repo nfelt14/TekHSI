@@ -6,6 +6,9 @@
         "group:githubArtifactActions",
         ":separatePatchReleases"
     ],
+    "ignorePats": [
+        "**/requirements.txt"
+    ],
     "packageRules": [
         {
             "addLabels": [
