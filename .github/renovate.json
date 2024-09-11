@@ -46,7 +46,8 @@
                 "poetry",
                 "pep621",
                 "pip_requirements"
-            ]
+            ],
+            "separateMajorMinor": false
         },
         {
             "description": "Group all Github Actions/Workflow updates together",
