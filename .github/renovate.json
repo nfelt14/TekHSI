@@ -40,7 +40,8 @@
                 "!dependencies"
             ],
             "matchManagers": [
-                "poetry"
+                "poetry",
+                "pep621"
             ]
         }
     ],
