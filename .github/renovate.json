@@ -3,11 +3,7 @@
     "dependencyDashboard": true,
     "extends": [
         "config:best-practices",
-        "group:githubArtifactActions",
-        ":separatePatchReleases"
-    ],
-    "ignorePaths": [
-        "**/requirements.txt"
+        "group:githubArtifactActions"
     ],
     "packageRules": [
         {
