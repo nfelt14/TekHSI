@@ -6,7 +6,7 @@
         "group:githubArtifactActions",
         ":separatePatchReleases"
     ],
-    "ignorePats": [
+    "ignorePaths": [
         "**/requirements.txt"
     ],
     "packageRules": [
