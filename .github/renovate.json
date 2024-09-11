@@ -32,6 +32,15 @@
                 "pip_requirements"
             ],
             "semanticCommitScope": "python-deps"
+        },
+        {
+            "description": "Group all non-production updates together",
+            "groupName": "python-dev-deps",
+            "matchDepTypes": [
+                "!dependencies"
+            ]
         }
-    ]
+    ],
+    "platformCommit": "enabled",
+    "prHourlyLimit": 5
 }
