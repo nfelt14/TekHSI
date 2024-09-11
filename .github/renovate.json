@@ -31,14 +31,21 @@
             "semanticCommitScope": "python-deps"
         },
         {
-            "description": "Group all non-production Python updates together",
+            "description": "Group all non-production Python updates from pyproject.toml together",
             "groupName": "python-dev-deps",
             "matchDepTypes": [
                 "!dependencies"
             ],
-            "matchManagers": [
-                "poetry",
-                "pep621"
+            "matchFileNames": [
+                "pyproject.toml"
+            ],
+            "separateMajorMinor": false
+        },
+        {
+            "description": "Group all non-production Python updates from requirements.txt files together",
+            "groupName": "python-dev-deps",
+            "matchFileNames": [
+                "**/requirements.txt"
             ],
             "separateMajorMinor": false
         },
