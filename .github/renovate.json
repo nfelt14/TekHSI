@@ -6,6 +6,7 @@
         "group:githubArtifactActions",
         "schedule:weekly"
     ],
+    "ignorePaths": [],
     "packageRules": [
         {
             "addLabels": [
@@ -47,7 +48,6 @@
             "description": "Group all non-production Python updates from requirements.txt files together",
             "groupName": "python-dev-deps",
             "matchFileNames": [
-                "tests/requirements.txt",
                 "**/requirements.txt"
             ],
             "separateMajorMinor": false
