@@ -5,12 +5,12 @@ on:
     branches: [main]
 jobs:
   update-python-and-pre-commit-dependencies:
-    if: ${{ false && github.actor == 'renovate[bot]' && endswith(github.head_ref, 'python-dev-deps') }}  # this is set to always skip for now
+    if: ${{ github.actor == 'renovate[bot]' && endswith(github.head_ref, 'python-dev-deps') }}
     uses: tektronix/python-package-ci-cd/.github/workflows/_reusable-update-python-and-pre-commit-dependencies.yml@3a82109ec91de73b4ea458037712eaf19607d392  # v1.3.0
     with:
       commit-user-name: ${{ vars.TEK_OPENSOURCE_NAME }}
       commit-user-email: ${{ vars.TEK_OPENSOURCE_EMAIL }}
-      dependency-dict: '{"dev": ["pylint", "pyright"]}'
+      dependency-dict: '{}'
       update-pre-commit: true
       run-pre-commit: true
       pre-commit-hook-skip-list: pylint,pyright,pyright-verifytypes,pyroma,poetry-audit

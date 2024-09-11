@@ -6,7 +6,9 @@
         "group:githubArtifactActions",
         "schedule:weekly"
     ],
-    "ignorePaths": [],
+    "ignorePaths": [
+        "**/requirements.txt"
+    ],
     "packageRules": [
         {
             "addLabels": [
@@ -40,15 +42,6 @@
             ],
             "matchFileNames": [
                 "pyproject.toml"
-            ],
-            "separateMajorMinor": false
-        },
-        {
-            "commitMessageSuffix": " for package development",
-            "description": "Group all non-production Python updates from requirements.txt files together",
-            "groupName": "python-dev-deps",
-            "matchFileNames": [
-                "**/requirements.txt"
             ],
             "separateMajorMinor": false
         },
