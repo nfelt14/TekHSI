@@ -30,7 +30,7 @@ wrap-summaries = 0
 [tool.poetry]
 authors = ["Tektronix <opensource@tektronix.com>"]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "Intended Audience :: Science/Research",
   "Operating System :: OS Independent",
@@ -50,9 +50,10 @@ maintainers = ["Tektronix <opensource@tektronix.com>"]
 name = "TekHSI"
 readme = "README.md"
 repository = "https://github.com/tektronix/TekHSI"
-version = "0.0.0"
+version = "1.0.0"
 
 [tool.poetry.dependencies]
+grpcio = "^1.51.3"
 numpy = [
   {python = "^3.9", version = "^1.26"},
   {python = "^3.8, <3.12", version = "^1.24"}
@@ -60,7 +61,7 @@ numpy = [
 protobuf = "^4.22.1"
 python = "^3.8"
 python-dateutil = "^2.8.2"
-tm_data_types = {develop = true, git = "https://github.com/tektronix/tm_data_types.git"}
+tm_data_types = "^0.1.0"
 typing_extensions = "^4.12.0"
 
 [tool.poetry.group.dev.dependencies]
@@ -83,6 +84,8 @@ pre-commit = [
 pylint = "3.2.6"
 pyright = "1.1.376"
 pyroma = "^4.2"
+pyvisa = "^1.14.1"
+tm_devices = "^2.3.0"
 tox = "^4.0"
 tox-gh-actions = "^3.1.0"
 twine = "^5.0.0"
@@ -114,7 +117,6 @@ tomli = "^2.0.1"
 
 [tool.poetry.group.tests.dependencies]
 coverage = "^7.5.0"
-grpcio = "^1.51.3"
 linkchecker = "^10.0.0"
 psutil = "^6.0.0"
 pytest = "^8.2.0"
@@ -189,6 +191,7 @@ disable = [
   "protected-access",  # caught by ruff
   "raise-missing-from",  # caught by ruff
   "redefined-builtin",  # caught by ruff
+  "singleton-comparison",  # ignored for inital commits   # TODO: remove this ignore
   "suppressed-message",  # allowed
   "too-many-arguments",  # caught by ruff
   "too-many-branches",  # caught by ruff
@@ -307,6 +310,12 @@ lines-between-types = 1
 order-by-type = false
 
 [tool.ruff.lint.per-file-ignores]
+"docs/additional_examples_and_pseudo_code/**" = [
+  "E501",  # Line too long
+  "ERA001",  # Found commented-out code
+  "S101",  # Use of assert detected
+  "SIM117"  # Use a single `with` statement with multiple contexts instead of nested `with` statements
+]
 "examples/**" = [
   "E501",  # Line too long
   "ERA001",  # Found commented-out code
