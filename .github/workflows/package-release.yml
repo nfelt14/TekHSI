@@ -16,7 +16,7 @@ concurrency:
   group: pypi
 jobs:
   package-release:
-    uses: tektronix/python-package-ci-cd/.github/workflows/_reusable-package-release.yml@v1.4.0
+    uses: tektronix/python-package-ci-cd/.github/workflows/_reusable-package-release.yml@3a82109ec91de73b4ea458037712eaf19607d392  # v1.3.0
     with:
       package-name: TekHSI
       repo-name: tektronix/TekHSI
