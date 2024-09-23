@@ -11,6 +11,13 @@
     ],
     "packageRules": [
         {
+            "description": "Set the minimum release age for all updates",
+            "matchPackageNames": [
+                "*"
+            ],
+            "minimumReleaseAge": "5 days"
+        },
+        {
             "addLabels": [
                 "gh-actions",
                 "dependencies"
